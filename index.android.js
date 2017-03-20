@@ -4,7 +4,7 @@
  * @flow
  */
 
- import App from 'app/index.app.js';
+ import App from './src/app/App.js';
  import {
    AppRegistry
  } from 'react-native';
