@@ -11,24 +11,44 @@ import {
   View
 } from 'react-native';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+import {
+  StackNavigator,
+} from 'react-navigation';
+
+import LoginModalStack from './scenes/login/LoginModalStack';
+//import Drawer from './scenes/Drawer';
+/*
+const PossibleRoutes = {
+  Drawer: {
+    name: 'Drawer Example',
+    description: 'Android-style drawer navigation',
+    screen: Drawer,
+  },
+  ModalStack: {
+    name: Platform.OS === 'ios' ? 'Modal Stack Example' : 'Stack with Dynamic Header',
+    description: Platform.OS === 'ios' ? 'Stack navigation with modals' : 'Dynamically showing and hiding the header',
+    screen: ModalStack,
   }
-}
+};*/
+
+const MainScreen = ({ navigation }) => (
+  <View style={styles.container}>
+    <Text style={styles.welcome}>
+      Welcome to React Native!
+    </Text>
+    <Text style={styles.instructions}>
+      To get started, edit index.android.js
+    </Text>
+    <Text style={styles.instructions}>
+      Double tap R on your keyboard to reload,{'\n'}
+      Shake or press menu button for dev menu
+    </Text>
+  </View>
+);
+
+const AppNavigator = LoginModalStack;
+
+export default () => <AppNavigator />
 
 const styles = StyleSheet.create({
   container: {
