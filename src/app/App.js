@@ -15,7 +15,8 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-import LoginModalStack from './scenes/login/LoginModalStack';
+import LoginModalStackNavigation from './scenes/login/LoginModalStackNavigation';
+import DrawerNavigation from './scenes/others/DrawerNavigation';
 //import Drawer from './scenes/Drawer';
 /*
 const PossibleRoutes = {
@@ -46,7 +47,10 @@ const MainScreen = ({ navigation }) => (
   </View>
 );
 
-const AppNavigator = LoginModalStack;
+//const AppNavigator = LoginModalStackNavigation;
+
+const AppNavigator = DrawerNavigation;
+AppNavigator.navigator = LoginModalStackNavigation;
 
 export default () => <AppNavigator />
 
