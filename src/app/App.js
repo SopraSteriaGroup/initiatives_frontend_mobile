@@ -47,9 +47,9 @@ const MainScreen = ({ navigation }) => (
   </View>
 );
 
-//const AppNavigator = LoginModalStackNavigation;
+const AppNavigator = LoginModalStackNavigation;
 
-const AppNavigator = DrawerNavigation;
+//const AppNavigator = DrawerNavigation;
 AppNavigator.navigator = LoginModalStackNavigation;
 
 export default () => <AppNavigator />

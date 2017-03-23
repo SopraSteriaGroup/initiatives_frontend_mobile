@@ -8,9 +8,12 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
+
 import {
   StackNavigator,
 } from 'react-navigation';
+
+import DrawerNavigation from '../others/DrawerNavigation';
 
 const LinkedInLoginScene = ({ navigation, banner }) => (
   <ScrollView>
@@ -24,7 +27,7 @@ const LinkedInLoginScene = ({ navigation, banner }) => (
 const SopraSteriaEmailLoginScene = ({ navigation, banner }) => (
   <ScrollView>
     <Button
-      onPress={() => navigation.navigate('SopraSteriaEmailLogin', { name: 'Jane' })}
+      onPress={() => navigation.navigate('Application', { name: 'Jane' })}
       title="Send email"
     />
   </ScrollView>
@@ -41,13 +44,23 @@ SopraSteriaEmailLoginScene.navigationOptions = {
   }
 };
 
+DrawerNavigation.navigationOptions = {
+  title: 'Sopra Steria Initiative',
+  header : {
+    left:null,
+  }
+};
+
 const LoginModalStackNavigation = StackNavigator({
   LinkedInLogin: {
     screen: LinkedInLoginScene,
   },
   SopraSteriaEmailLogin: {
-    screen: SopraSteriaEmailLoginScene  ,
-  }
+    screen: SopraSteriaEmailLoginScene,
+  },
+  Application: {
+    screen: DrawerNavigation,
+  },
 }, {
   mode: 'modal',
 });
