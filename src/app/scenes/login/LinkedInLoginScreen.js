@@ -8,15 +8,22 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView,
+  Button,
 } from 'react-native';
 
 export default class LinkedInLoginScene extends Component {
   render() {
+    const navigation = this.props.navigation;
+
     return (
-      <View>
-        <Text>LinkedIn Page</Text>
-      </View>
+      <ScrollView>
+        <Button
+          onPress={() => navigation.navigate('SopraSteriaEmailLoginScreen', { name: 'Jane' })}
+          title="Connect to LinkedIn"
+        />
+      </ScrollView>
     );
   }
 }

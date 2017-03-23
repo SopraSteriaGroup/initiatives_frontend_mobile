@@ -8,20 +8,23 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView,
+  Button,
 } from 'react-native';
 
 export default class SopraSteriaEmailLoginScene extends Component {
+
   render() {
+    const navigation = this.props.navigation;
+
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to login!
-        </Text>
-        <Text style={styles.instructions}>
-          Press here
-        </Text>
-      </View>
+      <ScrollView>
+        <Button
+          onPress={() => navigation.navigate('WelcomeScreen', { name: 'Jane' })}
+          title="Send email"
+        />
+      </ScrollView>
     );
   }
 }

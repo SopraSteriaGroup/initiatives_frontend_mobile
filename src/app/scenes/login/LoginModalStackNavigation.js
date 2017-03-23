@@ -14,30 +14,14 @@ import {
 } from 'react-navigation';
 
 import CoreNavigation from '../core/CoreNavigation';
+import SopraSteriaEmailLoginScreen from './SopraSteriaEmailLoginScreen';
+import LinkedInLoginScreen from './LinkedInLoginScreen';
 
-const LinkedInLoginScene = ({ navigation, banner }) => (
-  <ScrollView>
-    <Button
-      onPress={() => navigation.navigate('SopraSteriaEmailLogin', { name: 'Jane' })}
-      title="Connect to LinkedIn"
-    />
-  </ScrollView>
-);
-
-const SopraSteriaEmailLoginScene = ({ navigation, banner }) => (
-  <ScrollView>
-    <Button
-      onPress={() => navigation.navigate('Core', { name: 'Jane' })}
-      title="Send email"
-    />
-  </ScrollView>
-);
-
-LinkedInLoginScene.navigationOptions = {
+LinkedInLoginScreen.navigationOptions = {
   title: 'Sopra Steria Initiative',
 };
 
-SopraSteriaEmailLoginScene.navigationOptions = {
+SopraSteriaEmailLoginScreen.navigationOptions = {
   title: 'Sopra Steria Initiative',
   header : {
     left:null,
@@ -52,13 +36,13 @@ CoreNavigation.navigationOptions = {
 };
 
 const LoginModalStackNavigation = StackNavigator({
-  LinkedInLogin: {
-    screen: LinkedInLoginScene,
+  LinkedInLoginScreen: {
+    screen: LinkedInLoginScreen,
   },
-  SopraSteriaEmailLogin: {
-    screen: SopraSteriaEmailLoginScene,
+  SopraSteriaEmailLoginScreen: {
+    screen: SopraSteriaEmailLoginScreen,
   },
-  Core: {
+  WelcomeScreen: {
     screen: CoreNavigation,
   },
 }, {
