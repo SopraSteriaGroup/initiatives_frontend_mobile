@@ -62,7 +62,7 @@ DraftsScreen.navigationOptions = {
   },
 };
 
-const DrawerExample = DrawerNavigator({
+const CoreNavigation = DrawerNavigator({
   Inbox: {
     path: '/',
     screen: InboxScreen,
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrawerExample;
+export default CoreNavigation;

@@ -13,7 +13,7 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-import DrawerNavigation from '../others/DrawerNavigation';
+import CoreNavigation from '../core/CoreNavigation';
 
 const LinkedInLoginScene = ({ navigation, banner }) => (
   <ScrollView>
@@ -27,7 +27,7 @@ const LinkedInLoginScene = ({ navigation, banner }) => (
 const SopraSteriaEmailLoginScene = ({ navigation, banner }) => (
   <ScrollView>
     <Button
-      onPress={() => navigation.navigate('Application', { name: 'Jane' })}
+      onPress={() => navigation.navigate('Core', { name: 'Jane' })}
       title="Send email"
     />
   </ScrollView>
@@ -44,7 +44,7 @@ SopraSteriaEmailLoginScene.navigationOptions = {
   }
 };
 
-DrawerNavigation.navigationOptions = {
+CoreNavigation.navigationOptions = {
   title: 'Sopra Steria Initiative',
   header : {
     left:null,
@@ -58,8 +58,8 @@ const LoginModalStackNavigation = StackNavigator({
   SopraSteriaEmailLogin: {
     screen: SopraSteriaEmailLoginScene,
   },
-  Application: {
-    screen: DrawerNavigation,
+  Core: {
+    screen: CoreNavigation,
   },
 }, {
   mode: 'modal',
