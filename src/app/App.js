@@ -4,19 +4,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from 'react';
 
-import {
-  StackNavigator,
-} from 'react-navigation';
+import LoginNavigation from './scenes/login/LoginNavigation';
 
-import LoginModalStackNavigation from './scenes/login/LoginModalStackNavigation';
-
-const AppNavigator = LoginModalStackNavigation;
-
-export default () => <AppNavigator />
+export default () => <LoginNavigation />

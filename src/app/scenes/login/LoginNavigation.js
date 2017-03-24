@@ -35,7 +35,7 @@ CoreNavigation.navigationOptions = {
   }
 };
 
-const LoginModalStackNavigation = StackNavigator({
+const LoginNavigation = StackNavigator({
   LinkedInLoginScreen: {
     screen: LinkedInLoginScreen,
   },
@@ -49,4 +49,4 @@ const LoginModalStackNavigation = StackNavigator({
   mode: 'modal',
 });
 
-export default LoginModalStackNavigation;
+export default LoginNavigation;
