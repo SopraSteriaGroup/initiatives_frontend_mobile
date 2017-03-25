@@ -13,7 +13,19 @@ import {
   Button,
 } from 'react-native';
 
+import DataWsFactory from '../../components/services/data-ws/DataWsFactory'
+
 export default class SopraSteriaEmailLoginScene extends Component {
+
+  sendEmail(navigation){
+    DataWsFactory.getUserDataWs().findById('123').result
+      .then(response => {
+        console.log(response);
+        navigation.navigate('WelcomeScreen', response.result.data);
+      }).catch(err =>{
+        console.log('error', err);
+      });
+  }
 
   render() {
     const navigation = this.props.navigation;
@@ -21,7 +33,7 @@ export default class SopraSteriaEmailLoginScene extends Component {
     return (
       <ScrollView>
         <Button
-          onPress={() => navigation.navigate('WelcomeScreen', { name: 'Jane' })}
+          onPress={() => this.sendEmail(navigation)}
           title="Send email"
         />
       </ScrollView>

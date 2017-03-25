@@ -7,42 +7,36 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   ScrollView,
-  Button,
 } from 'react-native';
+import { Container, Content, Button, Text } from 'native-base';
 
 export default class LinkedInLoginScene extends Component {
   render() {
     const navigation = this.props.navigation;
 
     return (
-      <ScrollView>
-        <Button
-          onPress={() => navigation.navigate('SopraSteriaEmailLoginScreen', { name: 'Jane' })}
-          title="Connect to LinkedIn"
-        />
-      </ScrollView>
+      <Container style={styles.container}>
+        <View style={styles.content}>
+          <Button
+            onPress={() => navigation.navigate('SopraSteriaEmailLoginScreen')} >
+            <Text>LinkedIn Login</Text>
+          </Button>
+        </View>
+      </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
+    flex:1,
+    flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  content: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  }
+};
