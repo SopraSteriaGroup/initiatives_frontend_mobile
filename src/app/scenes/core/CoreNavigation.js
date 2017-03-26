@@ -13,6 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView style={styles.container}>
+    <Text>{banner}</Text>
     <Button
       onPress={() => navigation.navigate('DrawerOpen')}
       title="Open drawer"
@@ -26,13 +27,13 @@ const MyNavScreen = ({ navigation, banner }) => (
 
 const InboxScreen = ({ navigation }) => (
   <MyNavScreen
-    banner={'Inbox Screen'}
+    banner={'SoprIdées Screen'}
     navigation={navigation}
   />
 );
 InboxScreen.navigationOptions = {
   drawer: {
-    label: 'Inbox',
+    label: 'SoprIdées',
     icon: ({ tintColor }) => (
       <MaterialIcons
         name="move-to-inbox"
@@ -45,13 +46,13 @@ InboxScreen.navigationOptions = {
 
 const DraftsScreen = ({ navigation }) => (
   <MyNavScreen
-    banner={'Drafts Screen'}
+    banner={'Other Screen'}
     navigation={navigation}
   />
 );
 DraftsScreen.navigationOptions = {
   drawer: {
-    label: 'Drafts',
+    label: 'Other Screen',
     icon: ({ tintColor }) => (
       <MaterialIcons
         name="drafts"
