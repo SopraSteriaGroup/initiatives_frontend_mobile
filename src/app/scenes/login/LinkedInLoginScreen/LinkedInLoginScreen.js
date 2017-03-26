@@ -3,7 +3,7 @@
  *
  * @flow
  */
- 
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -11,15 +11,21 @@ import {
   ScrollView,
 } from 'react-native';
 import { Button, Text } from 'native-base';
-import AbstractTemplateScreen from '../AbstractTemplateScreen';
+import AbstractLoginTemplateScreen from '../AbstractLoginTemplateScreen';
 
-export default class LinkedInLoginScene extends AbstractTemplateScreen {
+import LinkedInLoginScreenStyles from './LinkedInLoginScreenStyles';
 
-  renderContent(navigation){
+export default class LinkedInLoginScreen extends AbstractLoginTemplateScreen {
+
+  constructor(props) {
+    super(props);
+  }
+
+  renderLoginContent(navigation){
     return (
       <View style={styles.container}>
         <View style={styles.content}>
-          <Button
+          <Button style={LinkedInLoginScreenStyles.btn}
             onPress={() => navigation.navigate('SopraSteriaEmailLoginScreen')} >
             <Text>LinkedIn Login</Text>
           </Button>

@@ -14,8 +14,8 @@ import {
 } from 'react-navigation';
 
 import CoreNavigation from '../core/CoreNavigation';
-import SopraSteriaEmailLoginScreen from './SopraSteriaEmailLoginScreen';
-import LinkedInLoginScreen from './LinkedInLoginScreen';
+import SopraSteriaEmailLoginScreen from './SopraSteriaEmailLoginScreen/SopraSteriaEmailLoginScreen';
+import LinkedInLoginScreen from './LinkedInLoginScreen/LinkedInLoginScreen';
 
 LinkedInLoginScreen.navigationOptions = {
   title: 'Sopra Steria Initiative',

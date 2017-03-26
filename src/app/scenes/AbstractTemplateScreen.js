@@ -8,12 +8,19 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Container, Text } from 'native-base';
 
+import AbstractTemplateScreenStyles from './AbstractTemplateScreenStyles';
+
 export default class AbstractTemplateScreen extends Component {
+
+  constructor(props) {
+    
+    super(props);
+  }
 
   renderContent(props){
     return (
-      <View style={styles.container}>
-        <View style={styles.content}>
+      <View style={AbstractTemplateScreenStyles.container}>
+        <View style={AbstractTemplateScreenStyles.content}>
             <Text>You forget to override renderContent...</Text>
         </View>
       </View>
@@ -30,15 +37,3 @@ export default class AbstractTemplateScreen extends Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    flex:1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  content: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-  }
-};
