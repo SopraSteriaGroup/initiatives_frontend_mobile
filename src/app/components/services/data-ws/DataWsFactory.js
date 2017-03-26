@@ -1,4 +1,4 @@
-import FRAUserDataService from './users/FRAUserDataService';
+import FRAUserDataService from './users/RestUserDataService';
 
 export default {
   getUserDataWs : function(){
