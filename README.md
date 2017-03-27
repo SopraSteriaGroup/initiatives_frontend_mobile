@@ -95,9 +95,9 @@ Warning : We doesn't update plist.info with LSApplicationQueriesSchemes because 
 On the command prompt run the following commands
 
 ```sh
-$ git clone https://github.com/start-react/native-starter-kit.git
+$ git clone https://github.com/SopraSteriaGroup/initiatives_frontend_mobile.git
 
-$ cd native-starter-kit/
+$ cd initiatives_frontend_mobile/
 
 $ npm install
 ```
