@@ -75,6 +75,15 @@ Performance wise, Easy Grid is noteworthy and works as fine as Flexbox, not much
 [More Examples](http://nativebase.io/components#layout) . . .
 
 
+
+### [React-native-linkedin-sdk](https://github.com/joonhocho/react-native-linkedin-sdk)
+
+- [Register of application](https://www.linkedin.com/developer/apps/224807/mobile)
+- [Android install](https://developer.linkedin.com/docs/android-sdk#)
+- [iOS install]
+
+Warning : We doesn't update plist.info with LSApplicationQueriesSchemes because LinkedIn SDK doesn't call the callback. [More information](https://github.com/tonyli508/LinkedinSwift/issues/22).
+
 ## Get Started
 
 ###1. System Requirements

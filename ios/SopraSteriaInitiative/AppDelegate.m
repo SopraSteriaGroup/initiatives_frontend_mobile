@@ -34,4 +34,17 @@
   return YES;
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  if ([LinkedinSwiftHelper shouldHandleUrl:url]) {
+    return [LinkedinSwiftHelper application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+  }
+  
+  // ... your code
+  
+  return YES;
+}
+
 @end

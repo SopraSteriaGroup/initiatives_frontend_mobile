@@ -1,0 +1,6 @@
+framework module Pods_SopraSteriaInitiative {
+  umbrella header "Pods-SopraSteriaInitiative-umbrella.h"
+
+  export *
+  module * { export * }
+}

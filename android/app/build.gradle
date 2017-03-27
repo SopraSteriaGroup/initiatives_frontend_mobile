@@ -84,7 +84,7 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         applicationId "com.soprasteriainitiative"
@@ -126,6 +126,8 @@ android {
 }
 
 dependencies {
+    compile project(':linkedin-sdk')
+    compile project(':react-native-linkedin-sdk')
     compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
