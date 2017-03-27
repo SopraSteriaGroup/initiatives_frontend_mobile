@@ -7,6 +7,14 @@
 
 No need of reinventing the wheel. This is a starter project to get the basic plumping of React Native with NativeBase, React Navigation and CodePush.
 
+If you want to develop for Android Platform then you must have Android development environment installed on your computer.
+
+If you want to develop for iOS Platform then you must have iOS development environment installed on your computer.
+
+If you want to develop for iOS and Android Platforms then you must have iOS development environment installed on your computer and Android development environment installed on your computer.
+
+WARNING : If you develop for only one platform, please send a pull request to ask for merge.
+
 # Content
 
 -	[Screens](#screens)
@@ -20,6 +28,7 @@ No need of reinventing the wheel. This is a starter project to get the basic plu
 - Login workflow with LinkedInLoginScreen, SopraSteriaEmailLoginScreen.
 - A rest API example with SopraSteriaEmailLoginScreen.
 - Modal and Drawer navigation with CoreNavigation and LoginNavigation.
+- LinkedInSDK integration.
 
 ## Technologies
 *Technologies used in Native Project*
@@ -62,25 +71,11 @@ The CodePush plugin helps get product improvements in front of your end users in
 Navigation views that deliver 60fps animations, and utilize native components to deliver a great look and feel. It will becomes the standard navigation library in the next release of React Native. More detail [here](https://facebook.github.io/react-native/docs/navigation.html).
 
 
-
-### [React Native Easy Grid](https://github.com/GeekyAnts/react-native-easy-grid)
-
-React Native Easy Grid is an open source package for grid layout from the team of [StrapMobile](http://strapmobile.com/).
-
-The layout system is an essential concept that needs to be mastered in order to create great layouts and UIs. [React Native](https://github.com/facebook/react-native) uses Flexbox to create the layouts, which is great when we need to accommodate our components and views in different screen sizes or even different devices. Flexbox is awesome but it could be tiresome for newbies.
-
-Easy Grid is very powerful and flexible layout system. No more worries about props of Flexbox such as alignItems, flexDirection, justifyContent, margin, padding, position, width etc. You can create any layout with all the available options that we have. Flexbox makes it look like percentages, however what actually is happening is just ratios. On the easier part, ratios are easier to represent than percentage/decimals. For this reason, the Easy Grid takes in ratios in place of percentage.
-Performance wise, Easy Grid is noteworthy and works as fine as Flexbox, not much of calculation.
-
-[More Examples](http://nativebase.io/components#layout) . . .
-
-
-
 ### [React-native-linkedin-sdk](https://github.com/joonhocho/react-native-linkedin-sdk)
 
 - [Register of application](https://www.linkedin.com/developer/apps/224807/mobile)
 - [Android install](https://developer.linkedin.com/docs/android-sdk#)
-- [iOS install]
+- [iOS install](https://developer.linkedin.com/docs/ios-sdk#)
 
 Warning : We doesn't update plist.info with LSApplicationQueriesSchemes because LinkedIn SDK doesn't call the callback. [More information](https://github.com/tonyli508/LinkedinSwift/issues/22).
 
